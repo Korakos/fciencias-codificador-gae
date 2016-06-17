@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Codificador</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300italic,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div class="page__container  page--submit">
+    <h1 class="page__title">Codificador</h1>
+    <div class="page__content">
+      <p style="color: red">{{mensaje}}</p>
+
+      <form method="post" enctype="multipart/form-data">
+
+        <h2>Nombre</h2>
+        <div class="field--long">
+          <label for='nombre'>Nombre:</label>
+          <input type="text" name="nombre" id="nombre"/>
+        </div>
+
+        <h2>Archivo</h2>
+        <div class="field--img">
+          <label for='archivo'>Archivo:</label>
+          <input type="file" name="archivo" id="archivo"/>
+        </div>
+
+        <h2>Algoritmo</h2>
+        <div class="field--radios">
+          <span class="alg">Polinomio:</span>
+            <input class="alg" type="radio" name="algoritmo" id="ciclico" value="ciclico"/>
+            <label for="ciclico">Codigo Ciclico</label><br>
+            <input class="alg" type="radio" name="algoritmo" id="rs" value="rs"/>
+            <label for="rs">Reed Solomon</label><br>
+        </div>
+
+        <h2>Accion</h2>
+        <div class="field--radios">
+          <span class="accion">Accion:</span>
+            <input class="acc" type="radio" name="accion" id="codificar" value="codificar"/>
+            <label for="codificar">codificar</label><br>
+            <input class="acc" type="radio" name="accion" id="decodificar" value="decodificar"/>
+            <label for="decodificar">decodificar</label><br>
+            <input class="acc" type="radio" name="accion" id="codDecod" value="codDecod"/>
+            <label for="codDecod">codificar y decodificar</label><br>
+        </div>
+
+        <div class="field--submit">
+          <input class="btn--submit" name="" type="submit" value="Procesar"/>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
